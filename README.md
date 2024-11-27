@@ -72,3 +72,20 @@ If the sum of all chosen digits matches the target (target == 0), print the resu
     * n>0 but target < 0 (sum exceeds the target).
     * n=0 but target != 0 (digits do not add up to the target).
 
+### Output for n=5, target=42
+For this input, the program will generate:
+```
+69999 78999 79899 79989 79998 87999 88899 88989 88998 89799 89889 89898 89979 89988 89997
+96999 97899 97989 97998 98799 98889 98898 98979 98988 98997 99699 99789 99798 99879 99888
+99897 99969 99978 99987 99996
+```
+
+### How It Works Step-by-Step for Example 69999:
+```
+First digit = '6', target=42−6=36, n=4.
+Second digit = '9', target=36−9=27, n=3.
+Third digit = '9', target=27−9=18, n=2.
+Fourth digit = '9', target=18−9=9, n=1.
+Fifth digit = '9', target=9−9=0, n=0.
+Base case is satisfied, and 69999 is printed.
+```

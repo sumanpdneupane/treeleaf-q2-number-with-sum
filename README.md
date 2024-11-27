@@ -53,12 +53,14 @@ Condition 2: else if n == 0 && target == 0
            ```
 
 3. Example Execution
+```
 Input: n=5, target=42
 Start with an empty string for result.
 First digit must be between '1' and '9' (e.g., start with '6').
 Subtract the value of the chosen digit from target and reduce nnn by 1.
 Repeat for subsequent digits until n=0.
 If the sum of all chosen digits matches the target (target == 0), print the result.
+```
 
 ### How the Program Ensures Validity
 1. No Leading Zeros: Handles the special case where the first digit cannot be 0:

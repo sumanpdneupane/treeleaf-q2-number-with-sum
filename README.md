@@ -59,3 +59,16 @@ First digit must be between '1' and '9' (e.g., start with '6').
 Subtract the value of the chosen digit from target and reduce nnn by 1.
 Repeat for subsequent digits until n=0n = 0n=0.
 If the sum of all chosen digits matches the target (target == 0), print the result.
+
+### How the Program Ensures Validity
+1. No Leading Zeros: Handles the special case where the first digit cannot be 0:
+    ``` go
+    if len(result) == 0 {
+        startDigit = '1'
+    }
+    ```
+2. Digit Constraints: Ensures only digits ('0' to '9') are considered.
+3. Pruning Invalid Branches: Stops recursion early when:
+    * n>0 but target < 0 (sum exceeds the target).
+    * n=0 but target != 0 (digits do not add up to the target).
+

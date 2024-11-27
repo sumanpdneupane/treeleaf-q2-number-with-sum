@@ -51,4 +51,3 @@ Condition 2: else if n == 0 && target == 0
             ``` go
             fmt.Print(result + " ")
             ```
-

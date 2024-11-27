@@ -43,11 +43,19 @@ Condition 1: if n > 0 && target >= 0
             * Reduces the target by the numeric value of the current digit (int(d-'0')).
 
 Condition 2: else if n == 0 && target == 0
-    * Purpose: Base case to terminate recursion.
-    * Logic:
-        * When n=0 (all digits have been added) and the remaining sum (target) is also 0, the 
-          current number (result) satisfies all conditions.
-        * Prints the number:
-            ``` go
-            fmt.Print(result + " ")
-            ```
+   * Purpose: Base case to terminate recursion.
+   * Logic:
+       * When n=0 (all digits have been added) and the remaining sum (target) is also 0, the
+         current number (result) satisfies all conditions.
+       * Prints the number:
+           ``` go
+           fmt.Print(result + " ")
+           ```
+
+3. Example Execution
+Input: n=5n = 5n=5, target=42\text{target} = 42target=42
+Start with an empty string for result.
+First digit must be between '1' and '9' (e.g., start with '6').
+Subtract the value of the chosen digit from target and reduce nnn by 1.
+Repeat for subsequent digits until n=0n = 0n=0.
+If the sum of all chosen digits matches the target (target == 0), print the result.
